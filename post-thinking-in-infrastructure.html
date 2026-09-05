@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinking in Infrastructure, Not Features — Prashanth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+    <div class="bg-orbit"></div>
+
+    <header class="glass header">
+        <div class="logo">PR<span>2050</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="toggleTheme" class="toggle-btn">☾</button>
+    </header>
+
+    <main class="post-page">
+        <section class="glass">
+            <div class="post-header">
+                <div class="post-meta">Tech • Signal • 2050-07-30</div>
+                <h1>Thinking in Infrastructure, Not Features</h1>
+            </div>
+
+            <div class="post-body">
+                <p>Features are the surface layer of technology. They’re the buttons, the menus, the toggles — the visible artifacts of design. But infrastructure is the story underneath. It’s the logic, the relationships, the patterns that make a system coherent.</p>
+                <p>Most products in 2050 still chase features. They stack them like bricks, hoping quantity will create quality. But features age quickly. They become outdated, replaced, or forgotten. Infrastructure endures.</p>
+                <p>Infrastructure is how a system thinks. Features are how a system behaves.</p>
+                <p>When you design infrastructure, you’re designing the future behavior of your product. You’re designing the rules that govern evolution. You’re designing the constraints that create identity.</p>
+                <p>Infrastructure is invisible, but it’s powerful. It determines what your product can become. It determines how your users will grow with it. It determines whether your system collapses under complexity or thrives because of it.</p>
+                <p>The future belongs to people who can see the underlying systems — not just the surface features.</p>
+            </div>
+
+            <div class="post-nav">
+                <a href="post-designing-for-long-horizons.html">Previous: Designing for Long Horizons</a>
+                <a href="post-the-personal-web-returns.html">Next: The Personal Web Returns</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass footer">
+        <p>© 2050 Prashanth — Broadcasting from the edge of possibility.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('toggleTheme');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('theme-light');
+            document.body.classList.toggle('theme-dark');
+            btn.textContent = document.body.classList.contains('theme-dark') ? '☾' : '☼';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Blogs Still Matter in 2050 — Prashanth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+    <div class="bg-orbit"></div>
+    <header class="glass header">
+        <div class="logo">PR<span>2050</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="toggleTheme" class="toggle-btn">☾</button>
+    </header>
+
+    <main class="post-page">
+        <section class="glass">
+            <div class="post-header">
+                <div class="post-meta">Systems • Signal • 2050-09-01</div>
+                <h1>Why Blogs Still Matter in 2050</h1>
+            </div>
+            <div class="post-body">
+                <p>By 2050, the internet has become a river of noise. Feeds refresh themselves before you finish reading them. Content evaporates in minutes. Platforms optimize for speed, not substance. In this environment, the idea of a “blog” feels almost quaint — a relic from a slower era.</p>
+                <p>But that’s exactly why blogs matter.</p>
+                <p>A blog is one of the last remaining places online where ideas can breathe. It’s a space that resists acceleration. It’s not built for virality, algorithms, or engagement loops. It’s built for thinking.</p>
+                <p>Blogs are not obsolete. They are the antidote to obsolescence.</p>
+                <p>Most digital platforms are designed for momentum — constant movement, constant novelty, constant reaction. But momentum is fragile. It disappears the moment you stop feeding it.</p>
+                <p>Blogs are designed for memory. A blog is a long‑term archive of your thinking. It’s a place where ideas compound instead of vanish. It’s where you can trace the evolution of your perspective across years, not minutes. It’s where someone in 2050 can discover something you wrote in 2030 and still find value in it.</p>
+                <p>In a world of noise, clarity becomes rare. In a world of speed, intention becomes valuable. In a world of automation, authenticity becomes magnetic.</p>
+                <p>A blog is a signal beacon — a place where your ideas stand apart from the noise. It’s not optimized for attention. It’s optimized for meaning. And meaning never goes out of style.</p>
+            </div>
+            <div class="post-nav">
+                <a href="post-designing-for-long-horizons.html">Next: Designing for Long Horizons</a>
+                <a href="index.html">Back to Signals</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass footer">
+        <p>© 2050 Prashanth — Broadcasting from the edge of possibility.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('toggleTheme');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                document.body.classList.toggle('theme-light');
+                document.body.classList.toggle('theme-dark');
+                btn.textContent = document.body.classList.contains('theme-dark') ? '☾' : '☼';
+            });
+        }
+    </script>
+</body>
+</html>

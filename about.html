@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Prashanth 2050</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+    <div class="bg-orbit"></div>
+    <header class="glass header">
+        <div class="logo">PR<span>2050</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+        </nav>
+        <button id="toggleTheme" class="toggle-btn">☾</button>
+    </header>
+
+    <main class="container">
+        <section class="glass about-card">
+            <h2>About Prashanth</h2>
+            <p>
+                I write at the intersection of design, technology, and systems thinking.
+                This space is a lab for ideas about how we might live, learn, and build
+                in 2050 and beyond.
+            </p>
+            <p>
+                Expect experiments, frameworks, and questions more than answers.
+                This isn’t a diary—it’s a signal hub.
+            </p>
+        </section>
+    </main>
+
+    <footer class="glass footer">
+        <p>© 2050 Prashanth — Designed for the long view.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('toggleTheme');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                document.body.classList.toggle('theme-light');
+                document.body.classList.toggle('theme-dark');
+                btn.textContent = document.body.classList.contains('theme-dark') ? '☾' : '☼';
+            });
+        }
+    </script>
+</body>
+</html>

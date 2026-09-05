@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Personal Web Returns — Prashanth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+    <div class="bg-orbit"></div>
+
+    <header class="glass header">
+        <div class="logo">PR<span>2050</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="toggleTheme" class="toggle-btn">☾</button>
+    </header>
+
+    <main class="post-page">
+        <section class="glass">
+            <div class="post-header">
+                <div class="post-meta">Future • Signal • 2050-06-18</div>
+                <h1>The Personal Web Returns</h1>
+            </div>
+
+            <div class="post-body">
+                <p>For decades, the internet drifted toward centralization. Platforms became the default home for identity. Creativity became templated. Expression became standardized. The personal web — the messy, expressive, handcrafted web — faded into nostalgia.</p>
+                <p>But in 2050, it’s returning.</p>
+                <p>People are rediscovering the value of owning their digital space. Not renting it. Not borrowing it. Owning it. A personal website is a quiet act of resistance against algorithmic identity. It’s a declaration that your ideas deserve a home that isn’t optimized for engagement metrics.</p>
+                <p>The personal web is slower, but it’s deeper. It’s smaller, but it’s stronger. It’s quieter, but it’s more honest.</p>
+                <p>A blog is the simplest form of digital ownership. It’s your archive, your identity, your signal beacon. It’s where your ideas can exist without being shaped by trends or feeds. It’s where you can build a body of work that grows with you.</p>
+                <p>The personal web isn’t nostalgia. It’s the future of authenticity.</p>
+            </div>
+
+            <div class="post-nav">
+                <a href="post-thinking-in-infrastructure.html">Previous: Thinking in Infrastructure</a>
+                <a href="index.html">Back to Signals</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass footer">
+        <p>© 2050 Prashanth — Broadcasting from the edge of possibility.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('toggleTheme');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('theme-light');
+            document.body.classList.toggle('theme-dark');
+            btn.textContent = document.body.classList.contains('theme-dark') ? '☾' : '☼';
+        });
+    </script>
+</body>
+</html>
