@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Prashanth 2050</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+    <div class="bg-orbit"></div>
+
+    <header class="glass header">
+        <div class="logo">PR<span>2050</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <button id="toggleTheme" class="toggle-btn">☾</button>
+    </header>
+
+    <main class="container">
+        <section class="glass about-card">
+            <h2>Contact</h2>
+            <p>If you want to talk about design, systems, or future-facing projects, you can reach me at:</p>
+            <p style="margin-top:10px;"><strong>Email:</strong> yourname@example.com</p>
+            <p style="margin-top:6px;"><strong>Preferred topics:</strong> long-horizon design, personal web, infrastructure thinking.</p>
+        </section>
+    </main>
+
+    <footer class="glass footer">
+        <p>© 2050 Prashanth — Open to interesting signals.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('toggleTheme');
+        btn.addEventListener('click', () => {
+            const dark = document.body.classList.toggle('theme-dark');
+            document.body.classList.toggle('theme-light', !dark);
+            btn.textContent = dark ? '☾' : '☼';
+            localStorage.setItem('pr2050-theme', dark ? 'dark' : 'light');
+        });
+        const saved = localStorage.getItem('pr2050-theme');
+        if (saved === 'light') {
+            document.body.classList.remove('theme-dark');
+            document.body.classList.add('theme-light');
+            btn.textContent = '☼';
+        }
+    </script>
+</body>
+</html>

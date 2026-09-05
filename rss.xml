@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Prashanth — 2050 Signals</title>
+    <link>https://prashanth2050.github.io/prashanth2050/</link>
+    <description>Essays on design, systems, and the long view.</description>
+    <item>
+      <title>Why Blogs Still Matter in 2050</title>
+      <link>https://prashanth2050.github.io/prashanth2050/post-why-blogs-still-matter.html</link>
+      <description>In a world of ephemeral feeds, a blog is a long-term memory node.</description>
+    </item>
+    <item>
+      <title>Designing for Long Horizons</title>
+      <link>https://prashanth2050.github.io/prashanth2050/post-designing-for-long-horizons.html</link>
+      <description>Designing for 2050 means choosing principles over trends.</description>
+    </item>
+  </channel>
+</rss>

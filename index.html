@@ -11,9 +11,12 @@
     <header class="glass header">
         <div class="logo">PR<span>2050</span></div>
         <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-        </nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
         <button id="toggleTheme" class="toggle-btn">☾</button>
     </header>
 
@@ -30,6 +33,10 @@
             <button class="cat-btn" data-cat="Tech">Tech</button>
             <button class="cat-btn" data-cat="Future">Future</button>
         </section>
+<section class="glass" style="margin-bottom:20px; padding:10px 16px;">
+    <input id="searchInput" type="text" placeholder="Search signals..."
+           style="width:100%; padding:8px 10px; border-radius:999px; border:none; outline:none; font-size:0.9rem;">
+</section>
 
         <section id="posts" class="posts-grid"></section>
     </main>
@@ -39,5 +46,21 @@
     </footer>
 
     <script src="blog.js"></script>
+<script>
+    const btn = document.getElementById('toggleTheme');
+    const saved = localStorage.getItem('pr2050-theme');
+    if (saved === 'light') {
+        document.body.classList.remove('theme-dark');
+        document.body.classList.add('theme-light');
+        btn.textContent = '☼';
+    }
+    btn.addEventListener('click', () => {
+        const dark = document.body.classList.toggle('theme-dark');
+        document.body.classList.toggle('theme-light', !dark);
+        btn.textContent = dark ? '☾' : '☼';
+        localStorage.setItem('pr2050-theme', dark ? 'dark' : 'light');
+    });
+</script>
+
 </body>
 </html>

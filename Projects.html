@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Prashanth 2050</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+    <div class="bg-orbit"></div>
+
+    <header class="glass header">
+        <div class="logo">PR<span>2050</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button id="toggleTheme" class="toggle-btn">☾</button>
+    </header>
+
+    <main class="container">
+        <section class="glass about-card">
+            <h2>Signals in Practice</h2>
+            <p>Selected projects where ideas from the blog turn into systems, interfaces, and experiments.</p>
+            <ul style="margin-top:12px; padding-left:18px;">
+                <li><strong>Project 01 — Long-Horizon Interface</strong>: A UI concept designed to remain usable across decades of change.</li>
+                <li><strong>Project 02 — Personal Web Lab</strong>: Tools and patterns for owning your digital space in 2050.</li>
+                <li><strong>Project 03 — Infrastructure Thinking Toolkit</strong>: Frameworks for seeing systems instead of features.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="glass footer">
+        <p>© 2050 Prashanth — Experiments at the edge of possibility.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('toggleTheme');
+        btn.addEventListener('click', () => {
+            const dark = document.body.classList.toggle('theme-dark');
+            document.body.classList.toggle('theme-light', !dark);
+            btn.textContent = dark ? '☾' : '☼';
+            localStorage.setItem('pr2050-theme', dark ? 'dark' : 'light');
+        });
+        const saved = localStorage.getItem('pr2050-theme');
+        if (saved === 'light') {
+            document.body.classList.remove('theme-dark');
+            document.body.classList.add('theme-light');
+            btn.textContent = '☼';
+        }
+    </script>
+</body>
+</html>

@@ -44,12 +44,21 @@ const posts = [
 const container = document.getElementById("posts");
 const themeToggle = document.getElementById("toggleTheme");
 const catButtons = document.querySelectorAll(".cat-btn");
+const searchInput = document.getElementById("searchInput");
 
-function renderPosts(filter = "all") {
+let currentFilter = "all";
+let currentQuery = "";
+
+function renderPosts() {
     if (!container) return;
     container.innerHTML = "";
     posts
-        .filter(p => filter === "all" || p.category === filter)
+        .filter(p => currentFilter === "all" || p.category === currentFilter)
+        .filter(p =>
+            !currentQuery ||
+            p.title.toLowerCase().includes(currentQuery) ||
+            p.excerpt.toLowerCase().includes(currentQuery)
+        )
         .forEach(post => {
             const card = document.createElement("article");
             card.className = "post-card glass";
@@ -66,25 +75,22 @@ function renderPosts(filter = "all") {
         });
 }
 
-if (container) {
-    renderPosts();
-}
-
-if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("theme-light");
-        document.body.classList.toggle("theme-dark");
-        themeToggle.textContent = document.body.classList.contains("theme-dark") ? "☾" : "☼";
-    });
-}
+if (container) renderPosts();
 
 if (catButtons.length) {
     catButtons.forEach(btn => {
         btn.addEventListener("click", () => {
             catButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
-            const cat = btn.dataset.cat;
-            renderPosts(cat === "all" ? "all" : cat);
+            currentFilter = btn.dataset.cat === "all" ? "all" : btn.dataset.cat;
+            renderPosts();
         });
+    });
+}
+
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        currentQuery = searchInput.value.trim().toLowerCase();
+        renderPosts();
     });
 }
